@@ -1,0 +1,61 @@
+/*********** ANİMATİON INTRO *********/  
+
+.outer{
+    background-color: blueviolet;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.inner {
+    background-color: cadetblue;
+    width: 50%;
+    height: 50%;
+   /*  transition: transform 1s ease-in-out, background-color 1s; */
+}
+
+.outer:hover .inner{
+/*     transform: translateX(100%);
+    background-color: chartreuse; */
+    animation: travel 1s ease-in-out;
+
+    /*! animasyon tekrar adedi */
+    /*! ********************************/
+    /* ? calc() metodu ile degiskenlere gore matematiksel olarak hesaplanabilir */
+  /*? inifinite yapilirsa surekli calisir. Bu sebeple sonsuz
+  /*? olan bir animasyonu hover'a  vermek yerine dogrdudan elemena vermek
+  /*? ve hover'ında  ise animation-play-state: paused ile durdurmak mantikli olabilir.; */
+    animation-iteration-count: 3;
+
+    /*! animasyon yönü */
+    /*! ********************************/
+    animation-direction: alternate;
+
+    /*! animasyon doldurma modu */
+    /*! ********************************/
+/*     animation-fill-mode: forwards; */
+}
+
+/*? Keyframe : animasyon noktalarının ve zamanlarının tanımlanmasını sağlar 
+/*? % olarak ve form - to şeklinde kullanılabilir */
+
+@keyframes travel {
+    /*! baslangıç konumu */
+    0%  {
+        transform: translateX(0);
+    }
+
+    /*! baslangıca göre 100 birim asagı*/
+
+    33% {
+        transform: translateY(100% );
+    }
+    66%{
+     /*! baslangıca göre 100 birim asagı*/
+        transform: translate(100%, 100%);
+    }
+    100%{
+        transform: translate(100%);
+
+    }
+}
