@@ -25,16 +25,27 @@
   /*? inifinite yapilirsa surekli calisir. Bu sebeple sonsuz
   /*? olan bir animasyonu hover'a  vermek yerine dogrdudan elemena vermek
   /*? ve hover'ında  ise animation-play-state: paused ile durdurmak mantikli olabilir.; */
-    animation-iteration-count: 3;
+   /*  animation-iteration-count: 3; */
 
     /*! animasyon yönü */
     /*! ********************************/
-    animation-direction: alternate;
+   /*  animation-direction: alternate; */
 
     /*! animasyon doldurma modu */
     /*! ********************************/
-/*     animation-fill-mode: forwards; */
+    /*? animasyonun, animasyon yonune de bagli olarak hangi keyframe de bitecegini gosterir. */
+    /*?  none, forwards, backwards, both */
+    animation-fill-mode: backwards; /*! animasyon ilk keyframe de biter*/
+    animation-fill-mode: forwards; /*! animasyon son keyframde biter*/
+
+    /*! animasyon gecikmesi */
+    /*! ********************************/
+    animation-delay: 1s;
+
+    animation: travel 2s ease-in-out 0.5s 2 alternate forwards;
+
 }
+
 
 /*? Keyframe : animasyon noktalarının ve zamanlarının tanımlanmasını sağlar 
 /*? % olarak ve form - to şeklinde kullanılabilir */
