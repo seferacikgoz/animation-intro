@@ -32,14 +32,14 @@ body{
     bottom: 0;
     left: 0;
     background-repeat: repeat-x;
-    animation: right 5s infinite ;
+  
 }
 
 .car{
     position: absolute;
     bottom: 55px;
     left: 30%;
-    animation: pop-up 0.8s linear infinite;
+
 }
 
 /** Animation **/
@@ -60,6 +60,12 @@ body{
     100%{
         transform: translateY(1px);
     }
+}
 
+.right{
+    animation: right 5s linear infinite ;
+}
 
+.pop-up{
+    animation: pop-up 0.8s linear infinite;
 }
